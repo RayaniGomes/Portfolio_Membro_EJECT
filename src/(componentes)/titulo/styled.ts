@@ -7,6 +7,7 @@ export const ContainerTitulo = styled.div<{color1: string, color2: string}>`
     margin-left: 5rem;
     margin-top: 3rem;
     gap: 0.25rem;
+    text-transform: uppercase;
 
     .linha {
         width: 7px;
