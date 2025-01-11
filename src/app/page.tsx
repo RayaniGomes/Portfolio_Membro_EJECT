@@ -7,7 +7,9 @@ export default function Home() {
     <main>
       <Navbar />
       <Benner />
-      
+      <section >
+        <Titulo>Membros ativos</Titulo>
+      </section>
     </main>
   );
 }
