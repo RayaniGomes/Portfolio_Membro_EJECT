@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Gwendolyn:wght@400;700&display=swap');
+
+:root {
+  --laranja: #FF9E16;
+  --amarelo: #FCCC04;
+  --azul-escuro: #003C64;
+  --azul-medio: #0787CB;
+  --azul-claro: #C7E6F6;
+  --branco: #FFFFFF; 
+
+  --gradiente-radial-azul: radial-gradient(50% 50% at 50% 50%, var(--branco) 0%, var(--azul-claro) 100%);
+  --gradiente-radial-laranja: radial-gradient(50% 50% at 50% 50%, var(--amarelo) 0%, var(--laranja) 100%);
+
+  --gradiente-linear-azul: linear-gradient(180deg, var(--branco) 0%, var(--azul-claro) 75%);
+  --gradiente-linear-laranja: linear-gradient(180deg, var(--amarelo) 0%, var(--laranja) 100%);
+
+  --drop-shadow: box-shadow: 4px 4px 10px 0px #CECECE;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--azul-escuro);
+  background-color: var(--branco);
+  font-family: "Exo 2", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+h1{
+  font-size: 128px;
+  font-weight: 700;
+}
+
+h2{
+  font-size: 36px;
+  font-weight: 700;
+}
+
+h3{
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h4{
+  font-size: 20px;
+  font-weight: 700;
+}
+
+p{
+  font-size: 16px;
+  font-weight: 400;
+}
+
+li{
+  font-size: 12px;
+  font-weight: 500;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
