@@ -12,13 +12,13 @@ export default function Home() {
       <Navbar />
       <Benner />
       <Section >
-        <Titulo>membros ativos</Titulo>
+        <Titulo color1="var(--laranja)" color2="var(--amarelo)">membros ativos</Titulo>
         <div className="membros">
           <Membro />
         </div>
       </Section>
       <Section>
-        <Titulo>pós-junior</Titulo>
+        <Titulo color1="var(--laranja)" color2="var(--amarelo)">pós-junior</Titulo>
         <div className="membros">
           <Membro />
         </div>
