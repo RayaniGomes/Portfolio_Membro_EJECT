@@ -14,7 +14,7 @@
   --gradiente-linear-azul: linear-gradient(180deg, var(--branco) 0%, var(--azul-claro) 75%);
   --gradiente-linear-laranja: linear-gradient(180deg, var(--amarelo) 0%, var(--laranja) 100%);
 
-  --drop-shadow: box-shadow: 4px 4px 10px 0px #CECECE;
+  --drop-shadow: 4px 4px 10px 0px #00000040;
 }
 
 html,
