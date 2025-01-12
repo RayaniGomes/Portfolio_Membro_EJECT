@@ -27,4 +27,23 @@ export const Nav = styled.nav`
         opacity: 0.9;
         }
     }
+
+    @media (max-width: 1024px) {
+        padding: 0rem 2rem;
+    }
+
+    @media (max-width: 768px) {
+        padding: 0rem 1rem;
+
+        img {
+            width: 100px;
+            height: 50px;
+        }
+
+        button {
+            width: 140px;
+            height: 35px;
+            font-size: 12px;
+        }
+    }
 `;
