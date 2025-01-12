@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import StyledComponentsRegistry from "./registry";
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 export const metadata: Metadata = {
   title: "Protfolio dos Membros",
