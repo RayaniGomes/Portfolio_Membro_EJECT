@@ -11,4 +11,12 @@ export const Section = styled.section`
         display: flex;
         padding-top: 2rem;    
     }
+
+    @media (max-width: 1024px) {
+        padding: 3rem 2rem;
+    }
+
+    @media (max-width: 768px) {
+        padding: 3rem 1rem;
+    }
 `;
