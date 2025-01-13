@@ -31,6 +31,7 @@ export const ContainerTitulo = styled.div<Props>`
     }
 
     @media (max-width: 450px) {
+        align-items: flex-start;
         .linha {
             width: 5px;
             height: 24px;

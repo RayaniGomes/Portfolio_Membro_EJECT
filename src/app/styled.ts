@@ -28,6 +28,10 @@ export const Section = styled.section`
         left: 50%;
     }
 
+    .container-amarelo {
+        background-color: var(--amarelo);
+    }
+
     @media (max-width: 1024px) {
         padding: 3rem 2rem;
     }
@@ -39,6 +43,33 @@ export const Section = styled.section`
             width: 80%;
         }
     }
-
-   
 `;
+
+export const SectionAmarela = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 5rem;
+    background-color: var(--amarelo);
+
+    .projetos {
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        flex-wrap: wrap;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        margin: 2rem auto;
+        gap: 2em;
+    }
+
+    @media (max-width: 1024px) {
+        padding: 3rem 2rem;
+    }
+
+    @media (max-width: 768px) {
+        padding: 3rem 1rem;
+        .projetos {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+    }
+`
