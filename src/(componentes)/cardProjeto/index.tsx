@@ -1,20 +1,24 @@
 import Image from "next/image";
 import { Card } from "./styled";
 
-export default function CardProjeto() {
+type CardProjetoProps = {
+    projeto: string;
+};
+
+export default function CardProjeto({ projeto }: CardProjetoProps) {
     return (
         <Card>
             <div className="container-logo">
                 <Image
                     src="/logo-projeto.svg"
-                    alt="projeto1"
+                    alt="Logo do Projeto"
                     width={100}
                     height={100}
                 />
             </div>
             <div className="container-nome">
-                <p>Nome do projeto</p>
+                <p>{projeto}</p>
             </div>
         </Card>
-    )
+    );
 }

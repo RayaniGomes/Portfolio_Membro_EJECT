@@ -1,14 +1,18 @@
-'use client';
 import Link from "next/link"
 import { ContainerMembro } from "./styled";
+import { MembroProp } from "@/interface";
 
-export default function Membro({ id }: { id: string }) {
+interface PropMembro {
+    membro?: MembroProp
+}
+export default function Membro({ membro = {} as MembroProp }: PropMembro) {
+    console.log(membro);
     return (
-        <ContainerMembro>
-            <Link href={`/portfolio/${id}`}>
+        <ContainerMembro $bgMembro={membro.foto}>
+            <Link href={`/portfolio/${membro._id}`}>
                 <div className="hover">
-                    <h4 >Rômulo Deyvid</h4>
-                    <p>Font-end</p>
+                    <h4>{membro.nome}</h4>
+                    <p>{membro.cargo}</p>
                 </div>
             </Link>
         </ContainerMembro>

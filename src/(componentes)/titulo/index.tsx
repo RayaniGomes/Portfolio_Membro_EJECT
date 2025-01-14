@@ -1,4 +1,3 @@
-'use client';
 import { ContainerTitulo } from "./styled";
 
 interface PropsTitulo {

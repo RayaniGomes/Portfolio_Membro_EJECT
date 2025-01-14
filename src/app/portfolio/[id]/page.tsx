@@ -6,84 +6,63 @@ import Navbar from "@/(componentes)/navbar";
 import Timeline from "@/(componentes)/timeline";
 import Titulo from "@/(componentes)/titulo";
 import { Section, SectionAmarela } from "@/app/styled";
-import { use } from "react";
+import { MembroProp } from "@/interface";
+import { use, useEffect, useState } from "react";
+import api from "@/service/api";
 
 type Params = Promise<{ id: string }>;
 
-
-const lista = [
-    {
-        ano: 2021,
-        eventos: [
-            "Foi efetivado na empresa",
-            "Iniciou o curso de Desenvolvimento Web",
-            "Terminou o curso de Desenvolvimento Web",
-        ]
-    },
-    {
-        ano: 2022,
-        eventos: [
-            "Foi efetivado na empresa",
-            "Iniciou o curso de Desenvolvimento Web",
-            "Terminou o curso de Desenvolvimento Web",
-        ]
-    },
-    {
-        ano: 2023,
-        eventos: [
-            "Foi efetivado na empresa",
-            "Iniciou o curso de Desenvolvimento Web",
-            "Terminou o curso de Desenvolvimento Web",
-        ]
-    },
-    {
-        ano: 2023,
-        eventos: [
-            "Foi efetivado na empresa",
-            "Iniciou o curso de Desenvolvimento Web",
-            "Terminou o curso de Desenvolvimento Web",
-        ]
-    },
-    {
-        ano: 2023,
-        eventos: [
-            "Foi efetivado na empresa",
-            "Iniciou o curso de Desenvolvimento Web",
-            "Terminou o curso de Desenvolvimento Web",
-        ]
-    },
-];
-
 export default function Portifolio(props: { params: Params }) {
     const urlParams = use(props.params);
+    const [membro, setMembro] = useState({} as MembroProp);
+    console.log(membro);
+
+    const getIDMembro = () => {
+        api.get(`/employees/${urlParams.id}`)
+            .then((response) => {
+                console.log(response.data);
+                setMembro(response.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+    }
+
+    useEffect(() => {
+        getIDMembro();
+        // eslint-disable-next-line
+    }, [urlParams.id]);
 
     return (
         <main>
             <Navbar />
-            <Dashboard />
+            <Dashboard membro={membro} />
             <Section>
                 <Titulo color1="var(--laranja)" color2="var(--amarelo)">timiline</Titulo>
                 <div className="timeline">
-                    {lista.map((item, index) => (
+                    {Array.isArray(membro.timeline) && membro.timeline.map((info, index) => (
                         <Timeline
-                            key={index}
-                            ano={item.ano}
-                            eventos={item.eventos}
-                            side={index % 2 === 0 ? "left" : "right"}
+                            key={info._id}
+                            timeline={info}
+                            side={index % 2 === 0 ? 'left' : 'right'}
                         />
                     ))}
                 </div>
+
             </Section>
             <SectionAmarela>
-                <Titulo color1="var(--azul-escuro)" color2="var(--azul-medio)">projetos que fez parte</Titulo>
+                <Titulo color1="var(--azul-escuro)" color2="var(--azul-medio)">
+                    projetos que fez parte
+                </Titulo>
                 <div className="projetos">
-                    <CardProjeto />
-                    <CardProjeto />
-                    <CardProjeto />
-                    <CardProjeto />
+                    {Array.isArray(membro.projetos) && membro.projetos.map((projeto, index) => (
+                        <CardProjeto key={index} projeto={projeto} />
+                    ))}
                 </div>
             </SectionAmarela>
+
+
             <Footer />
         </main>
-    )
+    );
 }

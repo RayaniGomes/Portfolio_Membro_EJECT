@@ -1,9 +1,14 @@
 import styled from "styled-components";
 
-export const ContainerMembro = styled.div`
+interface bgMembro {
+    $bgMembro: string
+}
+
+export const ContainerMembro = styled.div<bgMembro>`
         width: 170px;
         height: 170px;
-        background: url('/membro1.jpg') no-repeat center center;
+        margin: 0 auto;
+        background: url(${props => props.$bgMembro}) no-repeat center center;
         background-size: cover;
         border-radius: 50%;
         box-shadow: var(--drop-shadow);
@@ -28,10 +33,16 @@ export const ContainerMembro = styled.div`
         color: var(--branco);
         background-color: #189BE180;
         border-radius: 50%;
+        padding: .5rem;
         opacity: 0;
         scale: 0 1;
         transform-origin: center;
         transition: scale 0.5s;
+
+        p {
+            padding: 0 .5rem;
+            margin: 0;
+        }
     }
 
     &:hover {

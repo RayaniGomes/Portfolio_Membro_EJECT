@@ -1,23 +1,30 @@
-'use client';
+'user client';
 import Image from "next/image";
 import { ContainerDashboard } from "./styled";
 import Indice from "../indice";
 import { useState } from "react";
+import { MembroProp } from "@/interface";
 
-export default function Dashboard() {
+interface DashboardProps {
+    membro?: MembroProp;
+}
+
+export default function Dashboard({ membro = {} as MembroProp }: DashboardProps) {
     const [isAtivar, setIsAtivar] = useState(false);
 
     const handleAtivar = () => {
         setIsAtivar(!isAtivar);
     }
 
+    
+
     return (
         <ContainerDashboard>
             <div className="container">
                 <div className="container-foto">
                     <Image
-                        src="/membro1.jpg"
-                        alt="logo"
+                        src={membro.foto}
+                        alt={membro.nome}
                         width={450}
                         height={450}
                     />
@@ -25,18 +32,18 @@ export default function Dashboard() {
                 <div className="container-info">
                     <div className="info">
                         <div>
-                            <h2>Rômulo Deyvid</h2>
-                            <h4><strong>Cargo:</strong> Font-end</h4>
-                            <h4><strong>Tempo de empresa:</strong> 24 meses</h4>
+                            <h2>{membro.nome}</h2>
+                            <h4><strong>Cargo:</strong> {membro.cargo}</h4>
+                            <h4><strong>Tempo de empresa:</strong> {membro.tempo_de_empresa_em_meses} meses</h4>
                         </div>
 
                         <div className="container-reconhecimento">
                             <button onClick={handleAtivar}>
-                                <Image 
-                                    src="/icon_trofel.svg" 
-                                    alt="trofel" 
-                                    width={40} 
-                                    height={40} 
+                                <Image
+                                    src="/icon_trofel.svg"
+                                    alt="trofel"
+                                    width={40}
+                                    height={40}
                                 />
                             </button>
                             <div className={isAtivar ? 'reconhecimento' : 'close'}>
@@ -51,8 +58,8 @@ export default function Dashboard() {
                     </div>
                     <div className="indices">
                         <Indice titulo='Projetos' indice={10} />
-                        <Indice titulo='issues' indice={10} />
-                        <Indice titulo='#pracima' indice={10} />
+                        <Indice titulo='issues' indice={membro.issues} />
+                        <Indice titulo='#pracima' indice={membro.pra_cima} />
                     </div>
                 </div>
             </div>

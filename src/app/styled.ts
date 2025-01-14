@@ -3,13 +3,16 @@ import styled from "styled-components";
 export const Section = styled.section`
     width: 100%;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     padding: 3rem 5rem;
 
     .membros {
         width: 100%;
-        display: flex;
-        padding-top: 2rem;    
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+        padding-top: 2rem;
+        gap: 2rem;    
     }
 
     .timeline {
