@@ -26,23 +26,32 @@ export default function Home() {
       <Section>
         <Titulo color1="var(--laranja)" color2="var(--amarelo)">membros ativos</Titulo>
         <div className="membros">
-          {membrosAtivos.map((membro) => (
-            <Membro
-              key={membro._id}
-              membro={membro}
-            />
-          ))}
+          {membrosAtivos.length > 0 ? (
+            membrosAtivos.map((membro) => (
+              <Membro
+                key={membro._id}
+                membro={membro}
+              />
+            ))
+          ) : (
+            <p>Não há membros ativos</p>
+          )}
         </div>
       </Section>
       <Section>
         <Titulo color1="var(--laranja)" color2="var(--amarelo)">pós-junior</Titulo>
         <div className="membros">
-          {posJunior.map((membro) => (
-            <Membro
-              key={membro._id}
-              membro={membro}
-            />
-          ))}
+          {posJunior.length > 0 ? (
+            posJunior.map((membro) => (
+              <Membro
+                key={membro._id}
+                membro={membro}
+              />
+            ))
+          ):( 
+            <p>Não há membros ativos</p>
+          )}
+        
         </div>
       </Section>
       <Footer />
