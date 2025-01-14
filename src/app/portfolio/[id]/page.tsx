@@ -42,7 +42,7 @@ export default function Portifolio(props: { params: Params }) {
                 <div className="timeline">
                     {Array.isArray(membro.timeline) && membro.timeline.map((info, index) => (
                         <Timeline
-                            key={info._id}
+                            key={index}
                             timeline={info}
                             side={index % 2 === 0 ? 'left' : 'right'}
                         />
