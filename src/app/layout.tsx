@@ -14,6 +14,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
+  if (typeof window !== 'undefined') return <>{children}</>;
+
   return (
     <html lang="pt-br">
       <head>

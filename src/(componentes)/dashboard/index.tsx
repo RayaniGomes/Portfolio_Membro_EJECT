@@ -23,8 +23,8 @@ export default function Dashboard({ membro = {} as MembroProp }: DashboardProps)
             <div className="container">
                 <div className="container-foto">
                     <Image
-                        src={membro.foto}
-                        alt={membro.nome}
+                        src={membro.foto || "/avatar.png"}
+                        alt={membro.nome || "Foto do membro"}
                         width={450}
                         height={450}
                     />
@@ -57,7 +57,7 @@ export default function Dashboard({ membro = {} as MembroProp }: DashboardProps)
                         </div>
                     </div>
                     <div className="indices">
-                        <Indice titulo='Projetos' indice={10} />
+                        <Indice titulo='Projetos' indice={membro.projetos.length} />
                         <Indice titulo='issues' indice={membro.issues} />
                         <Indice titulo='#pracima' indice={membro.pra_cima} />
                     </div>
