@@ -16,7 +16,7 @@ export default function Dashboard({ membro = {} as MembroProp }: DashboardProps)
         setIsAtivar(!isAtivar);
     }
 
-    
+
 
     return (
         <ContainerDashboard>
@@ -57,10 +57,11 @@ export default function Dashboard({ membro = {} as MembroProp }: DashboardProps)
                         </div>
                     </div>
                     <div className="indices">
-                        <Indice titulo='Projetos' indice={membro.projetos.length} />
-                        <Indice titulo='issues' indice={membro.issues} />
-                        <Indice titulo='#pracima' indice={membro.pra_cima} />
+                        <Indice titulo='Projetos' indice={membro.projetos ? membro.projetos.length : 0} />
+                        <Indice titulo='issues' indice={membro.issues || 0} />
+                        <Indice titulo='#pracima' indice={membro.pra_cima || 0} />
                     </div>
+
                 </div>
             </div>
         </ContainerDashboard>
