@@ -13,7 +13,6 @@ export interface MembroProp {
 }
 
 export interface ProjetoProp {
-    _id: string;
     id: string;
     nome: string;
     logo: string;

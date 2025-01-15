@@ -16,6 +16,13 @@ export const Card = styled.div`
         justify-content: center;
         background-color: var(--branco);
         border-radius: 10px 10px 0px 0px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            margin: 0 auto;
+        }
     }
 
     .container-nome {
