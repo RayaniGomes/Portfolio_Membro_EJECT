@@ -17,21 +17,29 @@ export const ContainerTimeline = styled.section`
         border-radius: 10px;
         width: 50%;
         position: relative;
-        margin: 0 -2rem;   
+        margin: 0 -3rem;   
     }
 
     .timeline-item::before {
         content: '';
-        position: absolute;
+        position: relative;
         width: 25px;
         height: 25px;
         background-color: var(--amarelo);
         border-radius: 50%;
-        top: 0px;
-        left: 48.7%;
+        top: -5px;
+        left: 48.5%;
+        
+        @media (min-width: 2560px) {
+            left: 49%;
+        }
     }
 
-    
+    @media (max-width: 1024px) {
+        .timeline-item::before {
+            left: 48%;
+        }
+    }
 
     @media (max-width: 425px) {
         .content{
