@@ -20,7 +20,6 @@ export default function Portifolio(props: { params: Params }) {
     const getIDMembro = () => {
         api.get(`/employees/${urlParams.id}`)
             .then((response) => {
-                console.log(response.data);
                 setMembro(response.data);
             })
             .catch((error) => {

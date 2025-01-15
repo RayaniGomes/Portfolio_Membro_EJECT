@@ -64,8 +64,8 @@ export const ContainerFooter = styled.footer`
         .fluxo {
             flex-wrap: wrap;
 
-            h3 {
-                font-size: small;
+            h3, p {
+                font-size: x-small;
             }
 
         }

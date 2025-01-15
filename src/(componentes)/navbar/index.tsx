@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Navbar() {
     return (
         <Nav>
-            <Link href="/">
+            <Link href="https://www.ejectufrn.com.br/">
                 <Image
                     src="/logo.png"
                     alt="logo"
