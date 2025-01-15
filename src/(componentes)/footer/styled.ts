@@ -4,7 +4,7 @@ export const ContainerFooter = styled.footer`
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
     background-color: var(--azul-escuro);
     color: var(--branco);
@@ -22,10 +22,10 @@ export const ContainerFooter = styled.footer`
     .fluxo {
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: flex-start;
 
-        p {
+        h6 {
             color: #9C9C9C;
             font-weight: 400;
         }
@@ -37,14 +37,6 @@ export const ContainerFooter = styled.footer`
         .fluxo {
             flex-wrap: wrap;
             gap: 1rem;
-
-            h3 {
-                font-size: medium;
-            }
-
-        }
-        p {
-            font-size: small;
         }
     }
 
@@ -64,12 +56,10 @@ export const ContainerFooter = styled.footer`
         .fluxo {
             flex-wrap: wrap;
 
-            h3, p {
-                font-size: x-small;
-            }
+            
 
         }
-        p {
+        h6 {
             font-size: x-small;
         }
     }
@@ -82,6 +72,10 @@ export const ContainerFooter = styled.footer`
 
         .fluxo {
             gap: 0.5rem;
+        }
+
+        .sobre, .servicos {
+            display: none;
         }
     }
 `;

@@ -17,11 +17,7 @@ export const ContainerTimeline = styled.section`
         border-radius: 10px;
         width: 50%;
         position: relative;
-        margin: 0 -2rem;
-        
-        p {
-            margin-left: 1.5rem;
-        }   
+        margin: 0 -2rem;   
     }
 
     .timeline-item::before {
@@ -32,7 +28,7 @@ export const ContainerTimeline = styled.section`
         background-color: var(--amarelo);
         border-radius: 50%;
         top: 0px;
-        left: 48.5%;
+        left: 48.7%;
     }
 
     

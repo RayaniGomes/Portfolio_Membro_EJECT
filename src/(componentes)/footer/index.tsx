@@ -12,31 +12,31 @@ export default function Footer() {
                     height={60}
                 />
                 <div className="fluxo">
-                    <div>
-                        <h3>Sobre</h3>
-                        <p>Home</p>
-                        <p>Quem somos</p>
-                        <p>Solução</p>
-                        <p>Contato</p>
+                    <div className="sobre">
+                        <h5>Sobre</h5>
+                        <h6>Home</h6>
+                        <h6>Quem somos</h6>
+                        <h6>Solução</h6>
+                        <h6>Contato</h6>
+                    </div>
+                    <div className="servicos">
+                        <h5>Serviços</h5>
+                        <h6>Site e sistemas</h6>
+                        <h6>E-commerce</h6>
+                        <h6>Concepção</h6>
                     </div>
                     <div>
-                        <h3>Serviços</h3>
-                        <p>Site e sistemas</p>
-                        <p>E-commerce</p>
-                        <p>Concepção</p>
+                        <h5>Endereço</h5>
+                        <h6>inPACTA -R. Monte Sinai, 1828,<br />Capim Macio, 59078-360,<br />Natal- RN, </h6>
                     </div>
                     <div>
-                        <h3>Endereço</h3>
-                        <p>inPACTA -R. Monte Sinai, 1828,<br />Capim Macio, 59078-360,<br />Natal- RN, </p>
-                    </div>
-                    <div>
-                        <h3>Fale conosco</h3>
-                        <p>+55 (84) 99226-4221</p>
-                        <p>contato@eject.com.br</p>
+                        <h5>Fale conosco</h5>
+                        <h6>+55 (84) 99226-4221</h6>
+                        <h6>contato@eject.com.br</h6>
                     </div>
                 </div>
             </div>
-            <p>Feito com foco e compromisso pela EJECT © Rayani Gomes</p>
+            <h6>Feito com foco e compromisso pela EJECT © Rayani Gomes</h6>
         </ContainerFooter>
     );
 }

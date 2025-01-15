@@ -1,8 +1,9 @@
 import Image from "next/image";
 import { Card } from "./styled";
+import { ProjetoProp } from "@/interface";
 
 type CardProjetoProps = {
-    projeto: string;
+    projeto: ProjetoProp;
 };
 
 export default function CardProjeto({ projeto }: CardProjetoProps) {
@@ -10,14 +11,14 @@ export default function CardProjeto({ projeto }: CardProjetoProps) {
         <Card>
             <div className="container-logo">
                 <Image
-                    src="/logo-projeto.svg"
-                    alt="Logo do Projeto"
+                    src={projeto.logo || "/favicon.png"}
+                    alt={projeto.nome}
                     width={100}
                     height={100}
                 />
             </div>
             <div className="container-nome">
-                <p>{projeto}</p>
+                <p>{projeto.nome}</p>
             </div>
         </Card>
     );

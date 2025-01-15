@@ -6,10 +6,17 @@ export interface MembroProp {
     issues: number;
     nome: string;
     pra_cima: number;
-    projetos: string[];
+    projetos: ProjetoProp[];
     tempo_de_empresa_em_meses: number;
     timeline: TimelineItem[];
     junior: boolean;
+}
+
+export interface ProjetoProp {
+    _id: string;
+    id: string;
+    nome: string;
+    logo: string;
 }
 
 export interface TimelineItem {

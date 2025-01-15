@@ -13,7 +13,10 @@ export const Nav = styled.nav`
     top: 0;
     z-index: 999;
 
-    button {
+    .contato {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 200px;
         height: 40px;
         color: var(--branco);
@@ -40,7 +43,7 @@ export const Nav = styled.nav`
             height: 50px;
         }
 
-        button {
+        .contato {
             width: 140px;
             height: 35px;
             font-size: 12px;
