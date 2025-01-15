@@ -22,6 +22,7 @@ export const Card = styled.div`
             height: 100%;
             object-fit: contain;
             margin: 0 auto;
+            padding: 1rem;
         }
     }
 
