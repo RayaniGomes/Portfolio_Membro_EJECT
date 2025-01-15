@@ -37,7 +37,7 @@ export default function Portifolio(props: { params: Params }) {
             <Navbar />
             <Dashboard membro={membro} />
             <Section>
-                <Titulo color1="var(--laranja)" color2="var(--amarelo)">timiline</Titulo>
+                <Titulo color1="var(--laranja)" color2="var(--amarelo)">timeline</Titulo>
                 <div className="timeline">
                     {Array.isArray(membro.timeline) && membro.timeline.map((info, index) => (
                         <Timeline
