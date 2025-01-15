@@ -59,8 +59,7 @@ export const SectionAmarela = styled.div`
         width: 100%;
         display: grid;
         justify-content: center;
-        flex-wrap: wrap;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(150px, 250px));
         margin: 2rem auto;
         gap: 2em;
     }
